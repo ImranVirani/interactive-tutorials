@@ -1,4 +1,4 @@
-Passing Arguments to the Script
+Tutorial
 --------
 Arguments can be passed to the script when it is executed, by writing them as a space-delimited list following the script file name.
 
@@ -21,22 +21,25 @@ The variable $@ holds a space delimited string of all arguments passed to the sc
 
 Exercise
 -------------
-There is no exercise for this section. You may proceed.
+Pass "Shell is fun" (3 arguments) to the script as an array and print the length of the array.
 
 Tutorial Code
 -------------
     #!/bin/bash
-    # There is no exercise for this section.
-    # You may proceed.
+    #To pass three arguments
+    args=("$@")
+    echo ${args[0]} ${args[1]} ${args[2]}
+    echo $#                                           #prints the length f the array
 
 Solution
 --------
-    #!/bin/bash
-    # There is no exercise for this section.
-    # You may proceed.
+   #!/bin/bash
+   args=("Shell" "is" "fun")
+   echo ${args[0]} ${args[1]} ${args[2]}
+   echo ${#args[@]}
 
 Expected Output
 ---------------
-    #!/bin/bash
-    # There is no exercise for this section.
-    # You may proceed.
+    Shell is fun
+    3
+     
